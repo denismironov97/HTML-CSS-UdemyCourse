@@ -1,10 +1,7 @@
-h1,
-h2,
-h3,
-h4,
-p,
-li {
+body {
   font-family: sans-serif;
+  color: #444;
+  border-top: 10px solid #1098ad;
 }
 
 h1,
@@ -34,6 +31,10 @@ h4 {
   text-align: center;
 }
 
+nav {
+  font-size: 18px;
+}
+
 aside {
   background-color: #f7f7f7;
   border-top: 5px solid #1098ad;
@@ -43,12 +44,10 @@ aside {
 p {
   font-size: 22px;
   line-height: 1.5;
-  color: #444;
 }
 
 li {
   font-size: 20px;
-  color: #444;
 }
 
 .main-header {
