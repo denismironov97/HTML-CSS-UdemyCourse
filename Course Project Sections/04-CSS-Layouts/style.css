@@ -11,7 +11,7 @@ body {
 }
 
 .main-container {
-  width: 800px;
+  width: 1200px;
   /* margin-left: auto;
   margin-right: auto; */
   margin: 0 auto;
@@ -210,4 +210,18 @@ nav {
   content: "";
   clear: both;
   display: block;
+}
+
+article {
+  float: left;
+  width: 825px;
+}
+
+aside {
+  float: right;
+  width: 300px;
+}
+
+footer {
+  clear: both;
 }
