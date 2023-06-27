@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -46,6 +47,7 @@ h4 {
   font-size: 20px;
   text-transform: uppercase;
   text-align: center;
+  margin-bottom: 30px;
 }
 
 nav {
@@ -63,8 +65,7 @@ aside {
   border-bottom: 5px solid #1098ad;
   /* padding-top: 50px;
   padding-bottom: 50px; */
-  padding: 50px 0;
-  width: 500px;
+  padding: 50px 40px;
 }
 
 p {
@@ -115,6 +116,7 @@ li:last-child {
 
 .related-posts {
   list-style: none;
+  margin-left: 0;
 }
 
 footer p {
@@ -132,13 +134,13 @@ a:visited {
 }
 
 a:hover {
-  text-decoration: underline solid orangered;
-  color: orangered;
+  text-decoration: underline solid #ff4500;
+  color: #ff4500;
   font-weight: bold;
 }
 
 a:active {
-  background-color: black;
+  background-color: #000000;
   font-style: italic;
 }
 
