@@ -40,7 +40,24 @@
         margin: 40px;
 
         /* FLEXBOX */
-        /**/
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 15px;
+      }
+
+      .el--1 {
+        align-self: flex-start;
+        order: 2;
+      }
+
+      .el--6 {
+        order: -1;
+      }
+
+      .el--5 {
+        order: 1;
+        align-self: stretch;
       }
     </style>
   </head>
