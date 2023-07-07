@@ -23,16 +23,18 @@
       <article>
         <header class="post-header">
           <h2>The Basic Language of the Web: HTML</h2>
-          <img
-            class="author-img"
-            src="./img/laura-jones.jpg"
-            alt="headshot image of Laura Jones"
-            width="50px"
-            height="50px"
-          />
-          <p class="author">
-            Posted by <strong>Laura Jones</strong> on Monday, June 21st 2027
-          </p>
+          <div class="author-box">
+            <img
+              class="author-img"
+              src="./img/laura-jones.jpg"
+              alt="headshot image of Laura Jones"
+              width="50px"
+              height="50px"
+            />
+            <p class="author">
+              Posted by <strong>Laura Jones</strong> on Monday, June 21st 2027
+            </p>
+          </div>
           <img
             class="post-image"
             src="./img/post-img.jpg"
@@ -103,37 +105,46 @@
         <h4>Related posts</h4>
 
         <ul class="related-posts">
-          <li>
+          <li class="related-post-el">
             <img
               src="./img/related-1.jpg"
               alt="Person programming on laptop"
               width="75px"
               height="75px"
             />
-            <a href="https://developer.mozilla.org/en-US/" target="_blank"
-              >How to Learn Web Development</a
-            >
-            <p class="related-author">By Jonas Schmedtmann</p>
+            <div>
+              <a
+                href="https://developer.mozilla.org/en-US/"
+                target="_blank"
+                class="related-link"
+                >How to Learn Web Development</a
+              >
+              <p class="related-author">By Jonas Schmedtmann</p>
+            </div>
           </li>
-          <li>
+          <li class="related-post-el">
             <img
               src="./img/related-2.jpg"
               alt="Picture of a lightning storm"
               width="75px"
               height="75px"
             />
-            <a href="#">The Unknown powers of CCS</a>
-            <p class="related-author">By Jim Dillon</p>
+            <div>
+              <a href="#" class="related-link">The Unknown powers of CCS</a>
+              <p class="related-author">By Jim Dillon</p>
+            </div>
           </li>
-          <li>
+          <li class="related-post-el">
             <img
               src="./img/related-3.jpg"
               alt="Cool looking code opened on IDE"
               width="75px"
               height="75px"
             />
-            <a href="#">Why JavaScript is Awesome</a>
-            <p class="related-author">By Matilda</p>
+            <div>
+              <a href="#" class="related-link">Why JavaScript is Awesome</a>
+              <p class="related-author">By Matilda</p>
+            </div>
           </li>
         </ul>
       </aside>
