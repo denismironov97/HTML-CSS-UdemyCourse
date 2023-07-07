@@ -55,10 +55,6 @@ nav {
   text-align: center;
 }
 
-article {
-  margin-bottom: 60px;
-}
-
 aside {
   background-color: #f7f7f7;
   border-top: 5px solid #1098ad;
@@ -257,4 +253,22 @@ footer {
   font-weight: bold;
   font-style: normal;
   display: block;
+}
+
+.row {
+  display: flex;
+  align-items: flex-start;
+  gap: 75px;
+  margin-bottom: 60px;
+}
+
+aside {
+  /*Flex Property
+  flex-basis: 300px;
+  flex-shrink: 0;*/
+  flex: 0 0 300px;
+}
+
+article {
+  flex: 0 0 825px;
 }
