@@ -14,7 +14,7 @@
       }
       .el--3 {
         background-color: green;
-        height: 150px;
+        /* height: 150px; */
       }
       .el--4 {
         background-color: goldenrod;
@@ -50,8 +50,13 @@
 
         /* CSS GRID */
         display: grid;
-        grid-template-columns: 200px 170px 250px 150px;
-        grid-template-rows: 200px 180px;
+        /* grid-template-columns: 2fr 1fr 1fr 1fr; */
+        /* grid-template-rows: 300px 200px; */
+        grid-template-columns: repeat(4, 1fr);
+        height: 500px;
+        grid-template-rows: 1fr auto 3fr;
+        row-gap: 60px;
+        column-gap: 30px;
       }
 
       .container--2 {
