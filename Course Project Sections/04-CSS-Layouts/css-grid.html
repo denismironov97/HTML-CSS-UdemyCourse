@@ -14,7 +14,7 @@
       }
       .el--3 {
         background-color: green;
-        /* height: 150px; */
+        height: 150px;
       }
       .el--4 {
         background-color: goldenrod;
@@ -57,9 +57,12 @@
         grid-template-rows: 1fr 1fr 1fr;
         row-gap: 40px;
         column-gap: 30px;
+
+        /*Hiding grid*/
+        display: none;
       }
 
-      .el--8 {
+      /* .el--8 {
         grid-column: 2 / 3;
         grid-row: 1 / 2;
       }
@@ -71,20 +74,38 @@
 
       .el--5 {
         grid-column: 2 / -1;
-      }
+      } */
 
       .container--2 {
-        display: none;
         /* STARTER */
         font-family: sans-serif;
         background-color: black;
         font-size: 40px;
-        margin: 100px;
+        margin: 40px;
 
-        width: 1000px;
+        width: 700px;
         height: 600px;
 
         /* CSS GRID */
+        display: grid;
+        grid-template-columns: 125px 200px 125px;
+        grid-template-rows: 250px 100px;
+
+        /*Aligning tracks inside container: distributing empty space*/
+        justify-content: center; /*centered horizontally*/
+        align-content: center; /*centered vertically*/
+        gap: 30px;
+
+        /*Aligning items inside cells: Moving items around the cells*/
+        align-items: center; /*centered vertically*/
+        justify-items: center; /*centered horizontally*/
+
+        /* display: none; */
+      }
+
+      .el--3 {
+        align-self: end;
+        justify-self: end;
       }
     </style>
   </head>
