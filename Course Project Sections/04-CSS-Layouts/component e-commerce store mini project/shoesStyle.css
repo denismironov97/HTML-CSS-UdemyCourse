@@ -47,7 +47,7 @@ h2::before {
   top: -20px;
   left: -25px;
 }
-/*rewrite suing class rather adjacent selector*/
+/*rewrite using class rather adjacent selector*/
 
 .price {
   font-size: 24px;
@@ -176,7 +176,7 @@ li:last-child {
 */
 
 /*Page layout using flex box model*/
-.container {
+/* .container {
   display: flex;
   gap: 25px;
 }
@@ -197,6 +197,51 @@ li:last-child {
 .color-choices {
   display: flex;
   gap: 15px;
+}
+
+.more-info:link {
+  display: inline-block;
+  margin-bottom: 30px;
+} */
+
+/*Page layout using css-grid model*/
+/*Solution 1*/
+/* .container {
+  display: grid;
+  grid-template-columns: 250px 1fr 1fr;
+  column-gap: 35px;
+} */
+
+/*Solution 2*/
+.product {
+  display: grid;
+  grid-template-columns: 250px 1fr 1fr;
+  column-gap: 35px;
+}
+
+header {
+  grid-column: 1 / -1;
+}
+
+aside {
+  grid-column: 1 / -1;
+}
+
+.color-choices {
+  display: grid;
+  grid-template-columns: repeat(6, 20px);
+  column-gap: 15px;
+}
+
+.product-price {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.shipping {
+  justify-self: end;
 }
 
 .more-info:link {
