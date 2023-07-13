@@ -12,11 +12,18 @@ FONT SIZE SYSTEM (px)
   box-sizing: border-box;
 }
 
+/* Choosing color theme personality: Green color palette
+  Main color: #087f5b 
+  Shades: 
+  Tints:
+  Grey for text: #343a40*/
+
 /* ------------------------ */
 /* GENERAL STYLES */
 /* ------------------------ */
 body {
   font-family: "Inter", sans-serif;
+  color: #343a40;
 }
 
 .container {
@@ -40,6 +47,9 @@ h2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 80px;
+}
+
+.btn {
 }
 
 /* ------------------------ */
