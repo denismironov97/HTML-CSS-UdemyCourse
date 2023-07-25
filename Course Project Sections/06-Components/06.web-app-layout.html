@@ -29,7 +29,6 @@
       }
 
       nav,
-      menu,
       section,
       main,
       aside {
@@ -45,10 +44,50 @@
       menu {
         background-color: #7048e8;
         grid-column: 2 / -1;
+
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 0 40px;
+      }
+
+      button {
+        display: inline-block;
+        font-weight: bold;
+        font-size: 16px;
+        background-color: #5f3dc4;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        padding: 8px 12px;
+      }
+
+      button:last-child {
+        background-color: #d6336c;
+        margin-left: auto;
       }
 
       section {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        overflow: scroll;
+
         background-color: #e9ecef;
+        padding: 40px;
+      }
+
+      .email {
+        height: 96px;
+        background-color: #adb5bd;
+        color: #343a40;
+
+        flex-shrink: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
       main {
@@ -63,8 +102,25 @@
   <body>
     <div class="container">
       <nav>NAV</nav>
-      <menu>1 2 3</menu>
-      <section>Inbox</section>
+      <menu>
+        <button>New</button>
+        <button>Reply</button>
+        <button>Forward</button>
+        <button>Mark Unread</button>
+        <button class="btn-trash">Trash</button>
+      </menu>
+      <section>
+        <div class="email">Email 1</div>
+        <div class="email">Email 2</div>
+        <div class="email">Email 3</div>
+        <div class="email">Email 4</div>
+        <div class="email">Email 5</div>
+        <div class="email">Email 6</div>
+        <div class="email">Email 7</div>
+        <div class="email">Email 8</div>
+        <div class="email">Email 9</div>
+        <div class="email">Email 10</div>
+      </section>
       <main>Email View</main>
       <aside>Additional Info</aside>
     </div>
