@@ -126,3 +126,17 @@ Careers
 Recipe directory
 Help center
 Privacy & terms
+
+####################
+
+## Sections
+
+- Logo + Navigation
+- Hero
+- Featured in (small part with the logos usually right after the hero page)
+- How it works
+- Meals + (list of diets)
+- Testimonials + Gallery
+- Pricing + Features
+- Call to action CTA (usually last sections before the footer)
+- Footer
