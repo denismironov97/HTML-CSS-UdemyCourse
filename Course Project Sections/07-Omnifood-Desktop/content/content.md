@@ -129,7 +129,7 @@ Privacy & terms
 
 ####################
 
-## Sections
+####### Sections
 
 - Logo + Navigation
 - Hero
