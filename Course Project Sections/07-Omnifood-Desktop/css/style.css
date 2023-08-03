@@ -42,6 +42,13 @@ Default: 1
   box-sizing: border-box;
 }
 
+html {
+  /* font-size: 10px; */
+  /* Percentage of the users's browsers font-size setting */
+  /* 10 / 16px  = 62.5% */
+  font-size: 62.5%;
+}
+
 body {
   font-family: sans-serif;
   line-height: 1;
