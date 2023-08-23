@@ -320,6 +320,11 @@
   font-size: 1.8rem;
 }
 
+.list-item span:hover {
+  cursor: pointer;
+  color: #e67e22;
+}
+
 .all-recipes {
   font-size: 1.8rem;
   text-align: center;
