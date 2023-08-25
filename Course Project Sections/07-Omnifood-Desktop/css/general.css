@@ -21,11 +21,11 @@ Medium: 1.2
 
 
 --02 COLORS
-- Primary: #e67e22
-- Tints: #fdf2e9; #fae5d3;
-- Shades: #cf711f, #733f11;
+- Primary: #e67e22;
+- Tints: #fdf2e9; #fae5d3; #eb984e;
+- Shades: #cf711f; #733f11;
 - Accents:
-- Greys: #555, #333, #6f6f6f;
+- Greys: #555; #333; #6f6f6f;
 
 
 --03 IMG
@@ -34,6 +34,7 @@ Medium: 1.2
 
 
 --04 SHADOWS
+0 2.4rem 4.8rem rgba(0, 0, 0, 0.085);
 
 
 --05 BORDER-RADIUS 
