@@ -23,7 +23,7 @@ Medium: 1.2
 --02 COLORS
 - Primary: #e67e22;
 - Tints: #fdf2e9; #fae5d3; #eb984e;
-- Shades: #cf711f; #733f11;
+- Shades: #cf711f; #733f11; #45260a;
 - Accents:
 - Greys: #555; #333; #6f6f6f;
 
@@ -146,20 +146,23 @@ body {
   margin-bottom: 1.6rem;
 }
 
+.btn,
 .btn:link,
 .btn:visited {
   display: inline-block;
 
+  text-decoration: none;
   font-size: 2rem;
   font-weight: 600;
-  color: #fff;
   padding: 1.6rem 3.2rem;
   border-radius: 9px;
-  text-decoration: none;
 
+  border: none;
+  cursor: pointer;
+
+  transition: all 0.3s;
   /* Put transition state on original "state"/rule we want to transition from */
   /* transition: background-color 0.3s; */
-  transition: all 0.3s;
 }
 
 .btn--full:link,
@@ -186,6 +189,18 @@ body {
   /* To add border inside of an element 
     so that there is no jump of content compared to border way*/
   box-shadow: inset 0 0 0 3px #fff;
+}
+
+.btn--form {
+  background-color: #45260a;
+  color: #fdf2e9;
+  align-self: end;
+  padding: 1.2rem;
+}
+
+.btn--form:hover {
+  background-color: #fff;
+  color: #555;
 }
 
 .link:link,
@@ -225,6 +240,15 @@ body {
   gap: 1.6rem;
 
   font-size: 1.8rem;
+}
+
+*:focus {
+  outline: none;
+  /* outline: 4px dotted #e67e22; */
+  /* outline-offset: 8px; */
+
+  /* Trick to add border inside/outside the element, not outside */
+  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5);
 }
 
 /* Helper Classes/Settings Classes */
