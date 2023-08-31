@@ -52,6 +52,30 @@
 .main-nav-link.nav-cta:active {
   background-color: #cf711f;
 }
+
+/* Mobile Option Menu */
+.btn-mobile-nav {
+  display: none;
+
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #333;
+}
+
+/* We can select elements based on attributes 
+<ion-icon class="icon-mobile-navigation" name="menu-outline"></ion-icon>
+<ion-icon class="icon-mobile-navigation" name="close-outline"></ion-icon>
+*/
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
+
 /* *************************************************** */
 
 /* Hero Section */

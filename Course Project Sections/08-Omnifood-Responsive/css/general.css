@@ -61,6 +61,9 @@ html {
   /* Percentage of the users's browsers font-size setting */
   /* 10 / 16px  = 62.5% */
   font-size: 62.5%;
+
+  /* Works if there is nothing absolutely positioned in relation to body */
+  overflow-x: hidden;
 }
 
 body {
@@ -68,6 +71,8 @@ body {
   font-weight: 400;
   line-height: 1;
   color: #555;
+
+  overflow-x: hidden;
 }
 
 /* General Reusable Components */
