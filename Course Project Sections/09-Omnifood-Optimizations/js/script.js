@@ -1,24 +1,34 @@
-const yearCopyrightEl = document.querySelector('.copyright span');
+/* Adding automatic year replacement */
+const yearCopyrightEl = document.querySelector(".copyright span");
 const currYear = new Date().getFullYear();
 yearCopyrightEl.textContent = currYear;
 
-let bar = 0;
-// Fixing flexbox gap property missing in some Safari versions
-function checkFlexGap() {
-  var flex = document.createElement('div');
-  flex.style.display = 'flex';
-  flex.style.flexDirection = 'column';
-  flex.style.rowGap = '1px';
+/* Adding mobile navigation feature to work, to to appear */
+const kebabBtn = document.querySelector(".btn-mobile-nav");
+kebabBtn.addEventListener("click", toggleMobileNav);
+const mainHeaderEl = document.querySelector(".header");
 
-  flex.appendChild(document.createElement('div'));
-  flex.appendChild(document.createElement('div'));
+function toggleMobileNav() {
+  mainHeaderEl.classList.toggle("nav-open");
+}
+
+let bar = 0;
+// Fixing lexbox gap property missing in some Safari versions
+function checkFlexGap() {
+  var flex = document.createElement("div");
+  flex.style.display = "flex";
+  flex.style.flexDirection = "column";
+  flex.style.rowGap = "1px";
+
+  flex.appendChild(document.createElement("div"));
+  flex.appendChild(document.createElement("div"));
 
   document.body.appendChild(flex);
   var isSupported = flex.scrollHeight === 1;
   flex.parentNode.removeChild(flex);
   console.log(isSupported);
 
-  if (!isSupported) document.body.classList.add('no-flexbox-gap');
+  if (!isSupported) document.body.classList.add("no-flexbox-gap");
 }
 checkFlexGap();
 
