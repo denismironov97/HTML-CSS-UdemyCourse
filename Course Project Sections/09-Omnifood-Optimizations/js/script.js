@@ -12,8 +12,8 @@ function toggleMobileNav() {
   mainHeaderEl.classList.toggle("nav-open");
 }
 
-/*Implementing smooth scrolling*/
-//Selecting elements that only have the href property
+/* Implementing smooth scrolling */
+// Selecting elements that only have the href property
 const allAnchorTagEl = document.querySelectorAll("a:link");
 allAnchorTagEl.forEach((linkEl) =>
   linkEl.addEventListener("click", (ev) => {
@@ -31,18 +31,42 @@ allAnchorTagEl.forEach((linkEl) =>
       sectionEl.scrollIntoView({ behavior: "smooth" });
     }
 
-    //Close mobile nav
+    // Close mobile nav after choosing an option
     if (linkEl.classList.contains("main-nav-link")) {
       mainHeaderEl.classList.toggle("nav-open");
     }
   })
 );
 
-/*JS library that implements smooth scrolling for Safari*/
+/* JS library that implements smooth scrolling for Safari */
 // https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js
 
+/* Implementing sticky nav */
+const sectionHeroEL = document.querySelector(".section-hero");
+
+const options = {
+  // Inside of the viewport
+  root: null,
+  threshold: 0,
+  rootMargin: "-80px",
+};
+
+function actionObs(entries) {
+  const ent = entries[0];
+
+  if (!ent.isIntersecting) {
+    document.body.classList.add("sticky-nav");
+  } else {
+    document.body.classList.remove("sticky-nav");
+  }
+}
+
+const obs = new IntersectionObserver(actionObs, options);
+obs.observe(sectionHeroEL);
+
 let bar = 0;
-// Fixing lexbox gap property missing in some Safari versions
+
+// Fixing flexbox gap property missing in some Safari versions
 function checkFlexGap() {
   var flex = document.createElement("div");
   flex.style.display = "flex";
