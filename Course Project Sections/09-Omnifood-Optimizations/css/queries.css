@@ -23,6 +23,7 @@ Spacing system (px)
     grid-template-columns: repeat(2, 1fr);
   }
 }
+/* ********************************************************************** */
 
 /* Below 1200px (Landscape Tablets) */
 @media (max-width: 75em) {
@@ -60,6 +61,7 @@ Spacing system (px)
     padding: 9.6rem 3.2rem;
   }
 }
+/* ********************************************************************** */
 
 /* Below 944px (Tablets) */
 @media (max-width: 59em) {
@@ -132,7 +134,9 @@ Spacing system (px)
   }
 
   .main-nav {
-    background-color: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(10px);
+    -webkit-background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.6);
     position: absolute;
     top: 0;
     left: 0;
@@ -158,7 +162,7 @@ Spacing system (px)
     pointer-events: none;
 
     /* 3) Hide it from screen readers */
-    visibility: none;
+    visibility: hidden;
   }
 
   .nav-open .main-nav {
@@ -187,6 +191,7 @@ Spacing system (px)
     font-size: 3rem;
   }
 }
+/* ********************************************************************** */
 
 /* Below 704px (Smaller Tablets) */
 @media (max-width: 44em) {
@@ -225,6 +230,7 @@ Spacing system (px)
     margin-bottom: 3.2rem;
   }
 }
+/* ********************************************************************** */
 
 /* Below 544px (Phones) */
 @media (max-width: 34em) {
@@ -302,3 +308,55 @@ Spacing system (px)
     padding: 9.6rem 0;
   }
 }
+/* ********************************************************************** */
+
+/* Fix for flexbox gap property on Safari iOS */
+.no-flexbox-gap .main-nav-list li:not(:last-child) {
+  margin-right: 4.8rem;
+}
+
+.no-flexbox-gap .list-item:not(:last-child) {
+  margin-bottom: 1.6rem;
+}
+
+.no-flexbox-gap .list-icon:not(:last-child) {
+  margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .delivered-faces {
+  margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .meal-attribute:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.no-flexbox-gap .meal-icon {
+  margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .footer-row div:not(:last-child) {
+  margin-right: 6.4rem;
+}
+
+.no-flexbox-gap .social-links li:not(:last-child) {
+  margin-right: 2.4rem;
+}
+
+.no-flexbox-gap .footer-nav li:not(:last-child) {
+  margin-bottom: 2.4rem;
+}
+
+@media (max-width: 75em) {
+  .no-flexbox-gap .main-nav-list li:not(:last-child) {
+    margin-right: 3.2rem;
+  }
+}
+
+@media (max-width: 59em) {
+  .no-flexbox-gap .main-nav-list li:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 4.8rem;
+  }
+}
+/* ********************************************************************** */
