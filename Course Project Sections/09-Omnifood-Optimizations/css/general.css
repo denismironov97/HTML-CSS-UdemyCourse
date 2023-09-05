@@ -64,6 +64,9 @@ html {
 
   /* Works if there is nothing absolutely positioned in relation to body */
   overflow-x: hidden;
+
+  /* Does not work on Edge and Safari browsers */
+  /* scroll-behavior: smooth; */
 }
 
 body {

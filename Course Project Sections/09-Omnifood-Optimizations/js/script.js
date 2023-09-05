@@ -12,6 +12,35 @@ function toggleMobileNav() {
   mainHeaderEl.classList.toggle("nav-open");
 }
 
+/*Implementing smooth scrolling*/
+//Selecting elements that only have the href property
+const allAnchorTagEl = document.querySelectorAll("a:link");
+allAnchorTagEl.forEach((linkEl) =>
+  linkEl.addEventListener("click", (ev) => {
+    ev.preventDefault();
+
+    const href = linkEl.getAttribute("href");
+
+    if (href == "#") {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    } else if (href !== "#" && href.startsWith("#")) {
+      const sectionEl = document.querySelector(href);
+      sectionEl.scrollIntoView({ behavior: "smooth" });
+    }
+
+    //Close mobile nav
+    if (linkEl.classList.contains("main-nav-link")) {
+      mainHeaderEl.classList.toggle("nav-open");
+    }
+  })
+);
+
+/*JS library that implements smooth scrolling for Safari*/
+// https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js
+
 let bar = 0;
 // Fixing lexbox gap property missing in some Safari versions
 function checkFlexGap() {
@@ -31,8 +60,6 @@ function checkFlexGap() {
   if (!isSupported) document.body.classList.add("no-flexbox-gap");
 }
 checkFlexGap();
-
-// https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js
 
 /*
 .no-flexbox-gap .main-nav-list li:not(:last-child) {
