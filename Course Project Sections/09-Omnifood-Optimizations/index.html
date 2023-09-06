@@ -134,11 +134,16 @@
             </div>
           </div>
           <div class="hero-image-box">
-            <img
-              src="content/img/hero1200x1184.png"
-              alt="Woman enjoying food, display of delicious food, meals in storage containers, food bows on a table"
-              class="hero-image"
-            />
+            <picture>
+              <source srcset="content/img/hero1200x1184.png" type="image/png" />
+              <source srcset="content/img/hero.png" type="image/png" />
+
+              <img
+                src="content/img/hero1200x1184.png"
+                alt="Woman enjoying food, display of delicious food, meals in storage containers, food bows on a table"
+                class="hero-image"
+              />
+            </picture>
           </div>
         </div>
       </section>
