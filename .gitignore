@@ -1,6 +1,7 @@
 #Custom ignore files and directories
 notes.js
 genericComponent.html
+tempFolder
 
 # Logs
 logs
