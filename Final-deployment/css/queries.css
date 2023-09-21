@@ -11,7 +11,7 @@ Spacing system (px)
 
 /* Below 1344px (Smaller desktops) */
 @media (max-width: 84em) {
-  .hero {
+  .hero-container {
     max-width: 120rem;
   }
 
